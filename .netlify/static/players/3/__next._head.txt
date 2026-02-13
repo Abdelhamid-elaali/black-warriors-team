@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[20692,["/_next/static/chunks/9aa287a2f36f6d72.js","/_next/static/chunks/a4262163be71941a.js"],"ViewportBoundary"]
+3:I[20692,["/_next/static/chunks/9aa287a2f36f6d72.js","/_next/static/chunks/a4262163be71941a.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"EaJqqTCxNDotc-ql0Drxs","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"}],["$","meta","2",{"name":"theme-color","content":"#0a0a0a"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"NEXUS - BLACK WARRIORS"}],["$","meta","1",{"name":"description","content":"Rohan Verma | Support Specialist | BLACK WARRIORS esports team"}],["$","meta","2",{"name":"generator","content":"v0.app"}],["$","meta","3",{"name":"keywords","content":"esports, free fire, gaming, competitive, warriors"}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}

@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Black Warriors Brand - Dark Mode (Default) */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 45 95% 55%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 45 95% 55%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 45 95% 55%;
+    --chart-1: 45 95% 55%;
+    --chart-2: 0 0% 90%;
+    --chart-3: 0 0% 50%;
+    --chart-4: 45 80% 45%;
+    --chart-5: 0 0% 30%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 45 95% 55%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 45 95% 55%;
+    --sidebar-accent-foreground: 0 0% 5%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 45 95% 55%;
+  }
+  .dark {
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 10%;
+    --primary-foreground: 45 95% 55%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 25%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 45 95% 55%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 45 95% 55%;
+    --chart-1: 45 95% 55%;
+    --chart-2: 0 0% 90%;
+    --chart-3: 0 0% 50%;
+    --chart-4: 45 80% 45%;
+    --chart-5: 0 0% 30%;
+    --sidebar-background: 0 0% 8%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 45 95% 55%;
+    --sidebar-primary-foreground: 0 0% 5%;
+    --sidebar-accent: 45 95% 55%;
+    --sidebar-accent-foreground: 0 0% 5%;
+    --sidebar-border: 0 0% 20%;
+    --sidebar-ring: 45 95% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    color-scheme: dark;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism effect for premium cards */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Gold accent glow */
+  .glow-gold {
+    box-shadow: 0 0 20px rgba(220, 160, 55, 0.3);
+  }
+
+  /* Subtle text glow */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(220, 160, 55, 0.2);
+  }
+
+  /* Smooth transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Hero gradient overlay */
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
+  }
+}
