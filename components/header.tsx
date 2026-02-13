@@ -21,7 +21,7 @@ export function Header() {
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center transition-all duration-300 hover:scale-110 hover:rotate-3">
-          <img src="/logo.png" alt="BLACK WARRIORS" className="h-14 w-14 rounded-full" />
+          <img src="/logo.png" alt="BLACK WARRIORS" className="h-10 w-10 rounded-full" />
         </Link>
 
         {/* Desktop Navigation */}

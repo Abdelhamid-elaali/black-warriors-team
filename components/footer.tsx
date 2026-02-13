@@ -55,7 +55,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="BLACK WARRIORS" className="h-14 w-14 rounded-full" />
+              <img src="/logo.png" alt="BLACK WARRIORS" className="h-10 w-10 rounded-full" />
             </div>
             <p className="text-sm text-muted-foreground">
               Asia's premier Free Fire esports organization. Established to dominate.
