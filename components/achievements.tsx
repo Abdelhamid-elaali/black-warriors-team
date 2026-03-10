@@ -1,44 +1,25 @@
 'use client';
 
 import { Trophy, Medal, Target } from 'lucide-react';
+import { useParams } from 'next/navigation';
+import en from '@/dictionaries/en.json';
+import fr from '@/dictionaries/fr.json';
+import ar from '@/dictionaries/ar.json';
 
-interface Achievement {
-  id: string;
-  title: string;
-  description: string;
-  date: string;
-  icon: React.ReactNode;
-  highlight: boolean;
-}
+const dictionaries = { en, fr, ar } as const;
+type Locale = keyof typeof dictionaries;
 
-const ACHIEVEMENTS: Achievement[] = [
-  {
-    id: '1',
-    title: 'Free Fire Asia Championship 2025',
-    description: '1st Place - Regional Finals',
-    date: 'January 2025',
-    icon: <Trophy className="w-8 h-8" />,
-    highlight: true,
-  },
-  {
-    id: '2',
-    title: 'Spring Invitational Tournament',
-    description: '2nd Place - International League',
-    date: 'March 2025',
-    icon: <Medal className="w-8 h-8" />,
-    highlight: false,
-  },
-  {
-    id: '3',
-    title: 'Competitive Kill Count Record',
-    description: '1,247 eliminations in season',
-    date: 'Ongoing',
-    icon: <Target className="w-8 h-8" />,
-    highlight: false,
-  },
+const ICONS = [
+  <Trophy className="w-8 h-8" key="trophy" />,
+  <Medal className="w-8 h-8" key="medal" />,
+  <Target className="w-8 h-8" key="target" />,
 ];
 
 export function Achievements() {
+  const params = useParams();
+  const currentLang = (params?.lang as Locale) || 'en';
+  const t = dictionaries[currentLang]?.achievements || dictionaries.en.achievements;
+
   return (
     <section className="py-20 md:py-32 relative">
       {/* Background decoration */}
@@ -46,30 +27,30 @@ export function Achievements() {
 
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-          Recent <span className="text-accent">Achievements</span>
+          <span className="text-accent">{t.title}</span>
         </h2>
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-          Our journey of excellence and competitive success in 2025.
+          {t.description}
         </p>
 
         {/* Achievements Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {ACHIEVEMENTS.map((achievement) => (
+          {t.items.map((achievement, index) => (
             <div
-              key={achievement.id}
+              key={index}
               className={`group p-6 rounded-xl transition-smooth cursor-pointer ${
-                achievement.highlight
+                index === 0
                   ? 'glass border border-accent/30 glow-gold'
                   : 'glass border border-border hover:border-accent/30'
               }`}
             >
               {/* Icon */}
               <div className={`mb-4 inline-block p-3 rounded-lg ${
-                achievement.highlight
+                index === 0
                   ? 'bg-accent/20 text-accent'
                   : 'bg-muted text-muted-foreground group-hover:bg-accent/10 group-hover:text-accent'
               } transition-colors`}>
-                {achievement.icon}
+                {ICONS[index]}
               </div>
 
               {/* Content */}

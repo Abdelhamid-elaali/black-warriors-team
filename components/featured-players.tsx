@@ -2,6 +2,13 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { useParams } from 'next/navigation';
+import en from '@/dictionaries/en.json';
+import fr from '@/dictionaries/fr.json';
+import ar from '@/dictionaries/ar.json';
+
+const allDicts = { en, fr, ar } as const;
+type Locale = keyof typeof allDicts;
 
 interface Player {
   id: string;
@@ -14,35 +21,38 @@ interface Player {
 const FEATURED_PLAYERS: Player[] = [
   {
     id: '1',
-    name: 'Arjun Singh',
-    role: 'AWM Specialist',
+    name: 'Abdo',
+    role: 'Cover AWM - Leader',
     nickname: 'LBOSS',
-    image: '/Admin.png',
+    image: '/members/LBOSS.png',
   },
   {
     id: '2',
-    name: 'Priya Sharma',
-    role: 'Assault Leader',
+    name: 'Anas',
+    role: 'First Rusher ',
     nickname: 'TITAN',
-    image: '/fitgirl.png',
+    image: '/members/TITAN.png',
   },
   {
     id: '3',
-    name: 'Rohan Verma',
+    name: 'Fouad',
     role: 'Support Specialist',
     nickname: 'Chinwi',
-    image: '/Blue White Modern Neurologist Instagram Post.png',
+    image: '/members/CHINWI.png',
   },
   {
-    id: '4',
-    name: 'Vikram Patel',
-    role: 'In-Game Leader (IGL)',
-    nickname: 'ARYANA',
-    image: '/Comptable.png',
+    id: '5',
+    name: 'Iyad',
+    role: 'Second Rusher',
+    nickname: 'XBAN',
+    image: '/members/XBAN.png',
   },
 ];
 
 export function FeaturedPlayers() {
+  const params = useParams();
+  const currentLang = (params?.lang as Locale) || 'en';
+  const t = allDicts[currentLang]?.home || allDicts.en.home;
   return (
     <section className="py-20 md:py-32 relative">
       <div className="container mx-auto px-4">
@@ -50,17 +60,15 @@ export function FeaturedPlayers() {
         <div className="flex items-center justify-between mb-16">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Meet <span className="text-accent">Our Squad</span>
+              <span className="text-accent">{t.meetSquad}</span>
             </h2>
-            <p className="text-muted-foreground max-w-xl">
-              Five exceptional players united by one mission: dominance in competitive Free Fire.
-            </p>
+            <p className="text-muted-foreground max-w-xl">{t.meetSquadDesc}</p>
           </div>
           <Link
-            href="/squad"
+            href={`/${currentLang}/squad`}
             className="hidden md:flex items-center gap-2 text-accent font-semibold hover:gap-4 transition-smooth"
           >
-            View Full Squad <ArrowRight size={20} />
+            {t.viewFullSquad} <ArrowRight size={20} />
           </Link>
         </div>
 

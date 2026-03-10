@@ -1,0 +1,122 @@
+{
+  "nav": {
+    "home": "Home",
+    "squad": "Squad",
+    "news": "News",
+    "history": "History",
+    "media": "Media",
+    "recruitment": "Recruitment",
+    "joinUs": "Join Us"
+  },
+  "home": {
+    "welcome": "WELCOME TO",
+    "description": "Dominating Free Fire with precision, strategy, and unmatched teamwork. Join the revolution.",
+    "established": "Established as one of MENA's premier esports organizations, we represent excellence in competitive gaming.",
+    "viewSquad": "View Squad",
+    "joinTeam": "Join Our Team",
+    "meetSquad": "Meet Our Squad",
+    "meetSquadDesc": "Five exceptional players united by one mission: dominance in competitive Free Fire.",
+    "viewFullSquad": "View Full Squad"
+  },
+  "squad": {
+    "title": "Our Elite Squad",
+    "description": "Five exceptional players united by one mission: dominance in competitive Free Fire. Each member brings unique skills, experience, and unwavering commitment to excellence.",
+    "kills": "Kills",
+    "wins": "Wins",
+    "headshots": "Headshots",
+    "viewProfile": "View Profile",
+    "teamPhilosophy": "Team Philosophy",
+    "philosophyText": "At BLACK WARRIORS, we believe success comes from three pillars: exceptional mechanical skill, deep game knowledge, and unbreakable team cohesion. Our roster represents the best of competitive gaming in the MENA region. Each player has been carefully selected and developed through rigorous training, international competition, and continuous improvement. We don't just compete to win—we compete to dominate."
+  },
+  "history": {
+    "title": "Our History",
+    "description": "From a bold vision to becoming MENA's dominant Free Fire esports organization. This is the journey of BLACK WARRIORS.",
+    "elitePlayers": "Elite Players",
+    "elitePlayersDesc": "The most skilled roster in competitive Free Fire, hand-selected and trained by the best coaching staff.",
+    "tournamentsWon": "Major Tournaments Won",
+    "tournamentsDesc": "Championship titles spanning regional and international competitions, establishing our dominance.",
+    "yearsExcellence": "Years of Excellence",
+    "yearsDesc": "Since 2021, we've been pushing the boundaries of competitive gaming in the MENA region.",
+    "visionTitle": "Our Vision for 2025 & Beyond",
+    "vision1": "BLACK WARRIORS is not just a team—we're a movement toward excellence in esports. Our vision extends beyond winning tournaments; we aim to elevate the entire competitive gaming ecosystem in the MENA region.",
+    "vision2": "We're committed to developing the next generation of esports talent, creating opportunities for emerging players, and proving that MENA teams can dominate on the world stage.",
+    "vision3": "Through innovation in training methodologies, investment in sports science, and community engagement, BLACK WARRIORS will continue to set the standard for what it means to be a championship esports organization.",
+    "vision4": "The future is ours. The legends are being written. Join us on this incredible journey.",
+    "timeline": [
+      { "year": "2021", "title": "Foundation & Vision", "description": "BLACK WARRIORS is founded with a mission to establish MENA's premier Free Fire esports organization. The organization begins with intensive recruitment and training protocols.", "highlight": true },
+      { "year": "2022", "title": "First Championship", "description": "The newly assembled roster claims their first major tournament victory, announcing BLACK WARRIORS as a force to be reckoned with in competitive Free Fire.", "highlight": false },
+      { "year": "2022", "title": "Regional Expansion", "description": "BLACK WARRIORS establishes training facilities across three major cities in Morocco, implementing world-class coaching and sports science programs.", "highlight": false },
+      { "year": "2023", "title": "Youth Academy Launch", "description": "The organization launches its academy program to identify and develop emerging talent from the broader gaming community.", "highlight": false },
+      { "year": "2023", "title": "International Recognition", "description": "BLACK WARRIORS begins competing in international tournaments, establishing themselves as one of MENA's best teams on the global stage.", "highlight": false },
+      { "year": "2024", "title": "Record Breaking Season", "description": "The organization sets multiple tournament records, including the all-time seasonal kill record of 1,247 eliminations.", "highlight": true },
+      { "year": "2024", "title": "Media & Sponsorship Growth", "description": "Partnership with major sponsors and extensive media coverage brings BLACK WARRIORS into mainstream recognition.", "highlight": false },
+      { "year": "2025", "title": "Squad Completion & Dominance", "description": "BLACK WARRIORS secures MENA Cup 2025 championship with dominant performance.", "highlight": true }
+    ]
+  },
+  "media": {
+    "title": "Media Gallery",
+    "description": "Explore photos and highlights from BLACK WARRIORS tournaments, training sessions, and team moments.",
+    "noMedia": "No media found in this category.",
+    "all": "All",
+    "categories": {
+      "Tournament": "Tournament",
+      "Training": "Training",
+      "Team": "Team",
+      "Highlights": "Highlights"
+    }
+  },
+  "recruitment": {
+    "title": "Join The Warriors",
+    "description": "Are you ready to compete at the highest level? BLACK WARRIORS is always searching for elite talent. If you have what it takes, we want to hear from you.",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "hqLabel": "Headquarters",
+    "requirementsTitle": "What We're Looking For",
+    "req1": "Competitive Free Fire experience",
+    "req2": "Tournament proven track record",
+    "req3": "Team player mentality",
+    "req4": "Willingness to relocate",
+    "req5": "Dedication to excellence",
+    "fullName": "Full Name *",
+    "namePlaceholder": "Your name",
+    "emailAddress": "Email Address *",
+    "phoneNumber": "Phone Number *",
+    "position": "Position Applying For *",
+    "selectPosition": "Select a position",
+    "expLabel": "Years of Competitive Experience *",
+    "selectExp": "Select experience level",
+    "tellUs": "Tell Us About Yourself",
+    "messagePlaceholder": "Share your achievements, goals, and why you want to join BLACK WARRIORS...",
+    "submit": "Submit Application",
+    "submitting": "Submitting...",
+    "disclaimer": "By submitting this form, you agree to be contacted by BLACK WARRIORS recruitment team.",
+    "successTitle": "Application Received!",
+    "successMessage": "Thank you for your interest in BLACK WARRIORS. Our recruitment team will review your application and contact you within 7 days.",
+    "successCta": "Good luck, future warrior! 🦁",
+    "academyTitle": "Academy Program",
+    "academyDesc": "Not quite ready for the main roster? Our academy program is designed to develop emerging talent through intensive training, coaching, and competitive exposure.",
+    "academyCta": "Apply for Academy → Limited spots available",
+    "sponsorTitle": "Sponsorship Opportunities",
+    "sponsorDesc": "Interested in partnering with BLACK WARRIORS? We offer comprehensive sponsorship packages for brands looking to reach the competitive gaming community.",
+    "sponsorCta": "Contact us at sponsor@blackwarriors.gg"
+  },
+  "footer": {
+    "tagline": "MENA's premier Free Fire esports organization. Established to dominate.",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with ❤️ for competitive gaming",
+    "about": "About",
+    "community": "Community",
+    "connect": "Connect",
+    "contact": "Contact",
+    "sponsorships": "Sponsorships"
+  },
+  "achievements": {
+    "title": "Our Achievements",
+    "description": "A legacy built on championship titles, record-breaking performances, and unwavering excellence.",
+    "items": [
+      { "title": "Free Fire MENA Championship 2025", "description": "1st Place - Regional Finals", "date": "January 2025" },
+      { "title": "Spring Invitational Tournament", "description": "2nd Place - International League", "date": "March 2025" },
+      { "title": "Competitive Kill Count Record", "description": "1,247 eliminations in season", "date": "Ongoing" }
+    ]
+  }
+}

@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -13,42 +9,48 @@ body {
 }
 
 @layer base {
+  /* ============================================================
+     LIGHT MODE (default :root)
+     ============================================================ */
   :root {
-    /* Black Warriors Brand - Dark Mode (Default) */
-    --background: 0 0% 5%;
-    --foreground: 0 0% 95%;
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 95%;
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
-    --primary: 0 0% 10%;
-    --primary-foreground: 45 95% 55%;
-    --secondary: 0 0% 90%;
-    --secondary-foreground: 0 0% 10%;
-    --muted: 0 0% 25%;
-    --muted-foreground: 0 0% 70%;
-    --accent: 45 95% 55%;
+    --background: 40 20% 97%;          /* warm off-white */
+    --foreground: 0 0% 8%;             /* near-black text */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 15%;
+    --muted: 0 0% 90%;
+    --muted-foreground: 0 0% 42%;
+    --accent: 43 90% 48%;              /* slightly deeper gold for contrast */
     --accent-foreground: 0 0% 5%;
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 20%;
-    --input: 0 0% 15%;
-    --ring: 45 95% 55%;
-    --chart-1: 45 95% 55%;
-    --chart-2: 0 0% 90%;
-    --chart-3: 0 0% 50%;
-    --chart-4: 45 80% 45%;
-    --chart-5: 0 0% 30%;
+    --border: 0 0% 84%;
+    --input: 0 0% 95%;
+    --ring: 43 90% 48%;
+    --chart-1: 43 90% 48%;
+    --chart-2: 0 0% 30%;
+    --chart-3: 0 0% 55%;
+    --chart-4: 43 70% 40%;
+    --chart-5: 0 0% 75%;
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 90%;
-    --sidebar-primary: 45 95% 55%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 43 90% 48%;
     --sidebar-primary-foreground: 0 0% 5%;
-    --sidebar-accent: 45 95% 55%;
+    --sidebar-accent: 43 90% 48%;
     --sidebar-accent-foreground: 0 0% 5%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 45 95% 55%;
+    --sidebar-border: 0 0% 84%;
+    --sidebar-ring: 43 90% 48%;
   }
+
+  /* ============================================================
+     DARK MODE
+     ============================================================ */
   .dark {
     --background: 0 0% 5%;
     --foreground: 0 0% 95%;
@@ -92,25 +94,28 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-  html {
-    color-scheme: dark;
-  }
 }
 
 @layer utilities {
-  /* Glassmorphism effect for premium cards */
+  /* Glassmorphism — dark */
   .glass {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
+  /* Glassmorphism — light */
+  .light .glass {
+    background: rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
 
-  /* Gold accent glow */
+  /* Gold glow */
   .glow-gold {
     box-shadow: 0 0 20px rgba(220, 160, 55, 0.3);
   }
 
-  /* Subtle text glow */
+  /* Text glow */
   .text-glow {
     text-shadow: 0 0 10px rgba(220, 160, 55, 0.2);
   }

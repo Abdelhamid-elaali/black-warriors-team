@@ -3,8 +3,19 @@
 import Link from 'next/link';
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { useParams } from 'next/navigation';
+import en from '@/dictionaries/en.json';
+import fr from '@/dictionaries/fr.json';
+import ar from '@/dictionaries/ar.json';
+
+const dictionaries = { en, fr, ar } as const;
+type Locale = keyof typeof dictionaries;
 
 export function Footer() {
+  const params = useParams();
+  const currentLang = (params?.lang as Locale) || 'en';
+  const t = dictionaries[currentLang]?.footer || dictionaries.en.footer;
+  const nav = dictionaries[currentLang]?.nav || dictionaries.en.nav;
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -15,36 +26,36 @@ export function Footer() {
 
   const sections = [
     {
-      title: 'About',
+      title: t.about,
       links: [
-        { label: 'Squad', href: '/squad' },
-        { label: 'History', href: '/history' },
-        { label: 'Media', href: '/media' },
+        { label: nav.squad, href: `/${currentLang}/squad` },
+        { label: nav.history, href: `/${currentLang}/history` },
+        { label: nav.media, href: `/${currentLang}/media` },
       ],
     },
     {
-      title: 'Community',
+      title: t.community,
       links: [
-        { label: 'News', href: '/news' },
-        { label: 'Squad', href: '/squad' },
-        { label: 'Recruitment', href: '/recruitment' },
+        { label: nav.news, href: `/${currentLang}/news` },
+        { label: nav.squad, href: `/${currentLang}/squad` },
+        { label: nav.recruitment, href: `/${currentLang}/recruitment` },
       ],
     },
     {
-      title: 'Connect',
+      title: t.connect,
       links: [
-        { label: 'Discord', href: '#' },
-        { label: 'Contact', href: '/recruitment' },
-        { label: 'Sponsorships', href: '#' },
+        { label: 'Discord', href: 'https://discord.gg/wJs82Mh3G3' },
+        { label: t.contact, href: `/${currentLang}/recruitment` },
+        { label: t.sponsorships, href: '#LBOSS-GROUP' },
       ],
     },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Youtube, href: '#', label: 'YouTube' },
+    { icon: Facebook, href: 'https://www.facebook.com/', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/', label: 'Instagram' },
+    { icon: Twitter, href: 'https://twitter.com/', label: 'Twitter' },
+    { icon: Youtube, href: 'https://www.youtube.com/@BLACKWARROIRS', label: 'YouTube' },
   ];
 
   return (
@@ -58,7 +69,7 @@ export function Footer() {
               <img src="/logo.png" alt="BLACK WARRIORS" className="h-10 w-10 rounded-full" />
             </div>
             <p className="text-sm text-muted-foreground">
-              Asia's premier Free Fire esports organization. Established to dominate.
+              {t.tagline}
             </p>
           </div>
 
@@ -89,7 +100,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {currentYear} BLACK WARRIORS. All rights reserved.
+            © {currentYear} BLACK WARRIORS. {t.rights}
           </p>
 
           {/* Social Links */}
