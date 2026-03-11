@@ -6,6 +6,8 @@ import { useParams } from 'next/navigation';
 import en from '@/dictionaries/en.json';
 import fr from '@/dictionaries/fr.json';
 import ar from '@/dictionaries/ar.json';
+import { submitRecruitmentForm } from '@/app/actions/submit-recruitment';
+import { toast } from 'sonner';
 
 const dictionaries = { en, fr, ar } as const;
 type Locale = keyof typeof dictionaries;
@@ -26,13 +28,27 @@ export default function RecruitmentPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    setSubmitted(true);
-    setLoading(false);
-    setTimeout(() => {
-      setFormData({ name: '', email: '', phone: '', role: '', experience: '', message: '' });
-      setSubmitted(false);
-    }, 2000);
+    
+    try {
+      const response = await submitRecruitmentForm(formData);
+      
+      if (response.success) {
+        setSubmitted(true);
+        toast.success(t.successTitle || 'Application Submitted!');
+        
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setFormData({ name: '', email: '', phone: '', role: '', experience: '', message: '' });
+          setSubmitted(false);
+        }, 3000);
+      } else {
+        toast.error(response.error || 'Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      toast.error('An unexpected error occurred.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
