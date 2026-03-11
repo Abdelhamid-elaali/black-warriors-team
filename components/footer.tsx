@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Twitter, Youtube, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import en from '@/dictionaries/en.json';
@@ -52,8 +52,9 @@ export function Footer() {
   ];
 
   const socialLinks = [
+    { icon: MessageCircle, href: 'https://chat.whatsapp.com/GbJJ7rG3uGWCDifgNWyPm2', label: 'WhatsApp' },
     { icon: Facebook, href: 'https://www.facebook.com/', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/', label: 'Instagram' },
+    { icon: Instagram, href: 'https://ig.me/j/AbYKdGnbOA-s7r2_/', label: 'Instagram' },
     { icon: Twitter, href: 'https://twitter.com/', label: 'Twitter' },
     { icon: Youtube, href: 'https://www.youtube.com/@BLACKWARROIRS', label: 'YouTube' },
   ];
