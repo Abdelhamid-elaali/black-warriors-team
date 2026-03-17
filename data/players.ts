@@ -26,7 +26,7 @@ export const PLAYERS: Player[] = [
     name: 'Abdo',
     nickname: 'LBOSS',
     role: 'Cover AWM - Leader',
-    joinDate: '2022-03-15',
+    joinDate: '2020-10-15',
     image: '/members/LBOSS.png',
     stats: {
       kills: 7821,
@@ -41,8 +41,7 @@ export const PLAYERS: Player[] = [
       'Highest Kill Count Record - 1,247 season kills',
     ],
     social: {
-      instagram: '@shadow_pro',
-      twitch: 'shadowpro',
+      instagram: '@lboss_vtx'
     },
   },
   {
@@ -50,7 +49,7 @@ export const PLAYERS: Player[] = [
     name: 'Anas',
     nickname: 'TITAN',
     role: 'First Rusher ',
-    joinDate: '2022-06-20',
+    joinDate: '2020-11-20',
     image: '/members/TITAN.png',
     stats: {
       kills: 5124,
@@ -65,9 +64,7 @@ export const PLAYERS: Player[] = [
       'Best Entry Fragger 2024',
     ],
     social: {
-      instagram: '@ghost_warrior',
-      twitch: 'ghostwarrior',
-      youtube: 'GhostWarrior',
+      instagram: '@anasdaghi'
     },
   },
   {
@@ -75,7 +72,7 @@ export const PLAYERS: Player[] = [
     name: 'Fouad',
     nickname: 'Chinwi',
     role: 'Support Specialist',
-    joinDate: '2023-01-10',
+    joinDate: '2025-07-10',
     image: '/members/CHINWI.png',
     stats: {
       kills: 6456,
@@ -90,8 +87,7 @@ export const PLAYERS: Player[] = [
       'Most Improved Player',
     ],
     social: {
-      instagram: '@nexus_pro',
-      twitch: 'nexusgaming',
+      instagram: '@fouad_laifa_'
     },
   },
   {
@@ -99,7 +95,7 @@ export const PLAYERS: Player[] = [
     name: 'Iyad',
     nickname: 'XBAN',
     role: 'Second Rusher',
-    joinDate: '2023-05-22',
+    joinDate: '2021-05-22',
     image: '/members/XBAN.png',
     stats: {
       kills: 4892,
@@ -114,8 +110,7 @@ export const PLAYERS: Player[] = [
       'Best Adaptability Award',
     ],
     social: {
-      instagram: '@apex_warrior',
-      twitch: 'apexwarrior',
+      instagram: '@benaddi_iyad'
     },
   },
 ];
