@@ -85,5 +85,5 @@ Interested in joining the warriors or partnering with us?
 
 <p align="center">
   <b>© 2025 BLACK WARRIORS. ALL RIGHTS RESERVED.</b><br/>
-  <i>Made with ❤️ for competitive gaming excellence.</i>
+  <i>Made with LBOSS for competitive gaming excellence.</i>
 </p>
