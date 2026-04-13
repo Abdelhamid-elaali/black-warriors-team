@@ -118,5 +118,10 @@
       { "title": "Spring Invitational Tournament", "description": "2ème Place - Ligue Internationale", "date": "Mars 2025" },
       { "title": "Record de Kill Compétitif", "description": "1 247 éliminations en saison", "date": "En cours" }
     ]
+  },
+  "notFound": {
+    "title": "404 - SIGNAL PERDU",
+    "description": "Zone compromise. Guerrier, vous vous êtes aventuré en territoire inconnu. Ce secteur n'est pas sur notre carte tactique.",
+    "button": "Retour à la Base"
   }
 }

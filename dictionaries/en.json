@@ -118,5 +118,10 @@
       { "title": "Spring Invitational Tournament", "description": "2nd Place - International League", "date": "March 2025" },
       { "title": "Competitive Kill Count Record", "description": "1,247 eliminations in season", "date": "Ongoing" }
     ]
+  },
+  "notFound": {
+    "title": "404 - SIGNAL LOST",
+    "description": "Area compromised. Warrior, you've ventured into unknown territory. This sector is not on our tactical map.",
+    "button": "Return to Base"
   }
 }
