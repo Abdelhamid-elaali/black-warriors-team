@@ -58,11 +58,11 @@ export default function NotFound() {
         </div>
 
         {/* Tactical HUD accents (additional) */}
-        <div className="absolute bottom-10 left-10 hidden xl:block opacity-30">
+        <div className="absolute bottom-10 left-10 hidden xl:block opacity-30 text-left">
           <div className="text-[10px] font-mono text-accent space-y-1">
-            <p>> STATUS: ERROR_NOT_FOUND</p>
-            <p>> LOCALIZATION: {currentLang.toUpperCase()}</p>
-            <p>> COORDINATES: UNKNOWN</p>
+            <p>&gt; STATUS: ERROR_NOT_FOUND</p>
+            <p>&gt; LOCALIZATION: {currentLang.toUpperCase()}</p>
+            <p>&gt; COORDINATES: UNKNOWN</p>
           </div>
         </div>
       </div>
