@@ -41,6 +41,13 @@ const FEATURED_PLAYERS: Player[] = [
     image: '/members/CHINWI.png',
   },
   {
+    id: '4',
+    name: 'Ayoub',
+    role: 'First Rusher',
+    nickname: 'L4EO',
+    image: '/members/L4EO.png',
+  },
+  {
     id: '5',
     name: 'Iyad',
     role: 'Second Rusher',
@@ -77,7 +84,7 @@ export function FeaturedPlayers() {
           {FEATURED_PLAYERS.map((player) => (
             <Link
               key={player.id}
-              href={`/players/${player.id}`}
+              href={`/${currentLang}/players/${player.id}`}
               className="group relative overflow-hidden rounded-lg transition-smooth"
             >
               <div className="relative aspect-square overflow-hidden rounded-lg bg-card">
@@ -106,7 +113,7 @@ export function FeaturedPlayers() {
 
         <div className="flex md:hidden justify-center mt-12">
           <Link
-            href="/squad"
+            href={`/${currentLang}/squad`}
             className="px-8 py-3 border-2 border-accent text-accent font-semibold rounded-full transition-smooth hover:bg-accent/10 flex items-center gap-2"
           >
             View Full Squad <ArrowRight size={20} />

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft, Instagram, Facebook, Youtube } from 'lucide-react';
 
 interface Props {
-  params: Promise<{ id: string }>;
+  params: Promise<{ lang: string; id: string }>;
 }
 
 export async function generateStaticParams() {
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props) {
 }
 
 export default async function PlayerPage({ params }: Props) {
-  const { id } = await params;
+  const { lang, id } = await params;
   const player = PLAYERS.find((p) => p.id === id);
 
   if (!player) {
@@ -44,7 +44,7 @@ export default async function PlayerPage({ params }: Props) {
       <div className="container mx-auto px-4">
         {/* Back Button */}
         <Link
-          href="/squad"
+          href={`/${lang}/squad`}
           className="inline-flex items-center gap-2 text-accent font-semibold hover:gap-4 transition-all mb-8"
         >
           <ArrowLeft size={20} /> Back to Squad
@@ -196,7 +196,7 @@ export default async function PlayerPage({ params }: Props) {
             {otherPlayers.map((teammate) => (
               <Link
                 key={teammate.id}
-                href={`/players/${teammate.id}`}
+                href={`/${lang}/players/${teammate.id}`}
                 className="group"
               >
                 <div className="relative aspect-square rounded-lg overflow-hidden mb-4">

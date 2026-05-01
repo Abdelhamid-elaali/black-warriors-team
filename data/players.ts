@@ -34,7 +34,7 @@ export const PLAYERS: Player[] = [
       kd: 7.4,
       headshots: 2543,
     },
-    bio: 'Elite sniper with exceptional accuracy and positioning. 3x tournament champion. Known for clutch plays in high-pressure situations.',
+    bio: 'The Leader of Black Warriors Team and a versatile player who can adapt to any role (bomber and Support player). Strong mechanical skills and game sense. He is one of the main players in tournaments.',
     achievements: [
       'MENA Championship 2025 - 1st Place',
       'International Invitational 2024 - 2nd Place',
@@ -53,11 +53,11 @@ export const PLAYERS: Player[] = [
     image: '/members/TITAN.png',
     stats: {
       kills: 5124,
-      wins: 516,
+      wins: 1130,
       kd: 5.6,
       headshots: 3389,
     },
-    bio: 'Aggressive playmaker and team captain. Leading the assault with precision and strategy. Multiple championship titles.',
+    bio: 'Aggressive playmaker and first rusher player in the BW Team. Leading the assault with precision and strategy. Multiple championship titles.',
     achievements: [
       'Team Captain',
       'Most Aggressive Player Award',
@@ -80,7 +80,7 @@ export const PLAYERS: Player[] = [
       kd: 6.1,
       headshots: 1288,
     },
-    bio: 'Strategic support player and map controller. Expert in utility usage and team coordination. Graduated from academy system.',
+    bio: 'Strategic support player and map controller, and the second main rusher in the squad. Expert in utility usage and team coordination. Graduated from the academy system.',
     achievements: [
       'Rising Star Award 2024',
       'Best Utility Usage',
@@ -91,6 +91,23 @@ export const PLAYERS: Player[] = [
     },
   },
   {
+    id: '4',
+    name: 'Ayoub',
+    nickname: 'L4EO',
+    role: 'First Rusher',
+    joinDate: '2026-05-01',
+    image: '/members/L4EO.png',
+    stats: {
+      kills: 4508,
+      wins: 780,
+      kd: 3.8,
+      headshots: 1525,
+    },
+    bio: 'Pro rusher player and the first rusher for BLACK WARRIORS. A mobile player known for aggressive openings, fast pressure, and fearless entry fights.',
+    achievements: [],
+    social: {},
+  },
+  {
     id: '5',
     name: 'Iyad',
     nickname: 'XBAN',
@@ -99,11 +116,11 @@ export const PLAYERS: Player[] = [
     image: '/members/XBAN.png',
     stats: {
       kills: 4892,
-      wins: 1302,
+      wins: 1028,
       kd: 5.8,
       headshots: 1720,
     },
-    bio: 'Versatile player who can adapt to any role. Strong mechanical skills and game sense. Key player in recent tournaments.',
+    bio: 'Elite sniper with exceptional accuracy and positioning. 3x tournament champion. Known for clutch plays in high-pressure situations.',
     achievements: [
       'Spring Invitational 2025 - 2nd Place',
       'Flex Player of the Year 2024',
