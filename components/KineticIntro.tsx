@@ -29,7 +29,12 @@ export default function KineticIntro({ onComplete }: KineticIntroProps) {
   const [uiPhase, setUiPhase] = useState<Phase>('laser-scan');
   const [uiProgress, setUiProgress] = useState(0);
   const [uiStatus, setUiStatus] = useState('ESTABLISHING CONNECTION');
-  const [isDone, setIsDone] = useState(false);
+  // Only show intro once per browser session
+  const [isDone, setIsDone] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    return sessionStorage.getItem('bw_intro_seen') === '1';
+  });
+
 
   const progressBarRef = useRef<HTMLDivElement | null>(null);
   const progressTextRef = useRef<HTMLSpanElement | null>(null);
@@ -37,6 +42,7 @@ export default function KineticIntro({ onComplete }: KineticIntroProps) {
   const complete = useCallback(() => {
     setUiPhase('complete');
     setTimeout(() => {
+      sessionStorage.setItem('bw_intro_seen', '1');
       setIsDone(true);
       onComplete?.();
     }, 1000);
