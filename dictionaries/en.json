@@ -16,7 +16,8 @@
     "joinTeam": "Join Our Team",
     "meetSquad": "Meet Our Squad",
     "meetSquadDesc": "Five exceptional players united by one mission: dominance in competitive Free Fire.",
-    "viewFullSquad": "View Full Squad"
+    "viewFullSquad": "View Full Squad",
+    "saying": "Black warriors are an idea, and an idea never dies"
   },
   "squad": {
     "title": "Our Elite Squad",
@@ -37,8 +38,8 @@
     "tournamentsDesc": "Championship titles spanning regional and international competitions, establishing our dominance.",
     "yearsExcellence": "Years of Excellence",
     "yearsDesc": "Since 2021, we've been pushing the boundaries of competitive gaming in the MENA region.",
-    "visionTitle": "Our Vision for 2025 & Beyond",
-    "vision1": "BLACK WARRIORS is not just a team—we're a movement toward excellence in esports. Our vision extends beyond winning tournaments; we aim to elevate the entire competitive gaming ecosystem in the MENA region.",
+    "visionTitle": "Our Vision for 2027 & Beyond",
+    "vision1": "BLACK WARRIORS is not just a team—we're a movement toward excellence in esports. Our vision extends beyond winning tournaments; we aim to elevate the entire competitive gaming ecosystem in the MENA region and the World.",
     "vision2": "We're committed to developing the next generation of esports talent, creating opportunities for emerging players, and proving that MENA teams can dominate on the world stage.",
     "vision3": "Through innovation in training methodologies, investment in sports science, and community engagement, BLACK WARRIORS will continue to set the standard for what it means to be a championship esports organization.",
     "vision4": "The future is ours. The legends are being written. Join us on this incredible journey.",
@@ -66,7 +67,7 @@
     }
   },
   "recruitment": {
-    "title": "Join The Warriors",
+    "title": "Join The BW",
     "description": "Are you ready to compete at the highest level? BLACK WARRIORS is always searching for elite talent. If you have what it takes, we want to hear from you.",
     "emailLabel": "Email",
     "phoneLabel": "Phone",
@@ -98,7 +99,7 @@
     "academyCta": "Apply for Academy → Limited spots available",
     "sponsorTitle": "Sponsorship Opportunities",
     "sponsorDesc": "Interested in partnering with BLACK WARRIORS? We offer comprehensive sponsorship packages for brands looking to reach the competitive gaming community.",
-    "sponsorCta": "Contact us at sponsor@blackwarriors.gg"
+    "sponsorCta": "Contact us at abdelhamidelaali@gmail.com"
   },
   "footer": {
     "tagline": "MENA's premier Free Fire esports organization. Established to dominate.",

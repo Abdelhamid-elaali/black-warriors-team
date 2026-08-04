@@ -26,9 +26,16 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold text-balance mb-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-balance mb-4">
             BLACK <span className="text-accent">WARRIORS</span>
           </h1>
+
+          {/* Main POV Motto Badge */}
+          <div className="mb-8 inline-block px-6 py-2.5 rounded-full border border-accent/40 bg-accent/10 backdrop-blur-md shadow-[0_0_25px_rgba(197,160,89,0.35)]">
+            <p className="text-sm md:text-lg font-extrabold tracking-widest text-accent italic">
+              &ldquo;{dict.saying}&rdquo;
+            </p>
+          </div>
 
           <p className="text-xl md:text-2xl text-muted-foreground text-balance mb-4 max-w-2xl mx-auto">
             {dict.description}

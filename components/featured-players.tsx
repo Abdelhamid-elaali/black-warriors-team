@@ -7,54 +7,10 @@ import en from '@/dictionaries/en.json';
 import fr from '@/dictionaries/fr.json';
 import ar from '@/dictionaries/ar.json';
 
+import { PLAYERS } from '@/data/players';
+
 const allDicts = { en, fr, ar } as const;
 type Locale = keyof typeof allDicts;
-
-interface Player {
-  id: string;
-  name: string;
-  role: string;
-  nickname: string;
-  image: string;
-}
-
-const FEATURED_PLAYERS: Player[] = [
-  {
-    id: '1',
-    name: 'Abdo',
-    role: 'Cover AWM - Leader',
-    nickname: 'LBOSS',
-    image: '/members/LBOSS.png',
-  },
-  {
-    id: '2',
-    name: 'Anas',
-    role: 'First Rusher ',
-    nickname: 'TITAN',
-    image: '/members/TITAN.png',
-  },
-  {
-    id: '3',
-    name: 'Fouad',
-    role: 'Support Specialist',
-    nickname: 'Chinwi',
-    image: '/members/CHINWI.png',
-  },
-  {
-    id: '4',
-    name: 'Ayoub',
-    role: 'First Rusher',
-    nickname: 'L4EO',
-    image: '/members/L4EO.png',
-  },
-  {
-    id: '5',
-    name: 'Iyad',
-    role: 'Second Rusher',
-    nickname: 'XBAN',
-    image: '/members/XBAN.png',
-  },
-];
 
 export function FeaturedPlayers() {
   const params = useParams();
@@ -81,7 +37,7 @@ export function FeaturedPlayers() {
 
         {/* Players Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {FEATURED_PLAYERS.map((player) => (
+          {PLAYERS.map((player) => (
             <Link
               key={player.id}
               href={`/${currentLang}/players/${player.id}`}

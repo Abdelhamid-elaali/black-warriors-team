@@ -108,14 +108,24 @@ export function Header() {
           </DropdownMenu>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden p-2 transition-all duration-300 hover:bg-accent/10 rounded-lg text-muted-foreground hover:text-foreground"
-          aria-label="Toggle menu"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Actions: Theme Toggle & Menu Button */}
+        <div className="flex lg:hidden items-center gap-2">
+          <button
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+            className="p-2 rounded-xl bg-secondary/30 border border-border hover:bg-accent/10 transition-all text-muted-foreground hover:text-accent shadow-sm"
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 transition-all duration-300 hover:bg-accent/10 rounded-lg text-muted-foreground hover:text-foreground"
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}

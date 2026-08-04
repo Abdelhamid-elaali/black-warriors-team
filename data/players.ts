@@ -49,7 +49,7 @@ export const PLAYERS: Player[] = [
     name: 'Anas',
     nickname: 'TITAN',
     role: 'First Rusher ',
-    joinDate: '2020-11-20',
+    joinDate: '2021-02-01',
     image: '/members/TITAN.png',
     stats: {
       kills: 5124,
@@ -72,7 +72,7 @@ export const PLAYERS: Player[] = [
     name: 'Fouad',
     nickname: 'Chinwi',
     role: 'Support Specialist',
-    joinDate: '2025-07-10',
+    joinDate: '2025-07-01',
     image: '/members/CHINWI.png',
     stats: {
       kills: 6456,
@@ -112,7 +112,7 @@ export const PLAYERS: Player[] = [
     name: 'Iyad',
     nickname: 'XBAN',
     role: 'Second Rusher',
-    joinDate: '2021-05-22',
+    joinDate: '2021-04-01',
     image: '/members/XBAN.png',
     stats: {
       kills: 4892,
@@ -128,6 +128,50 @@ export const PLAYERS: Player[] = [
     ],
     social: {
       instagram: '@benaddi_iyad'
+    },
+  },
+  {
+    id: '6',
+    name: 'Mohammed',
+    nickname: 'ETM',
+    role: 'Support Specialist',
+    joinDate: '2025-02-01',
+    image: '/members/ETM.jpeg',
+    stats: {
+      kills: 6585,
+      wins: 952,
+      kd: 5.5,
+      headshots: 2908,
+    },
+    bio: 'Support Specialist for BLACK WARRIORS. Known for exceptional tactical awareness, utility management, and clutch team support in competitive tournaments.',
+    achievements: [
+      'MENA Championship 2025 - 1st Place',
+      'Best Support Specialist Award',
+    ],
+    social: {
+      instagram: '@etm__018'
+    },
+  },
+  {
+    id: '7',
+    name: 'Aymane',
+    nickname: 'LMONTIF',
+    role: 'Second Rusher',
+    joinDate: '2026-08-01',
+    image: '/members/LMONTIF.jpeg',
+    stats: {
+      kills: 8560,
+      wins: 1742,
+      kd: 8.4,
+      headshots: 3281,
+    },
+    bio: 'Second Rusher for BLACK WARRIORS. A high-fragging entry specialist with lethal accuracy and aggressive playstyle leading the frontlines.',
+    achievements: [
+      'Top Fragger MENA League 2024',
+      'Most Eliminations Award',
+    ],
+    social: {
+      instagram: '@lmontif__es'
     },
   },
 ];

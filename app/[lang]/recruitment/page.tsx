@@ -70,7 +70,7 @@ export default function RecruitmentPage() {
                   <div className="p-3 bg-accent/20 text-accent rounded-lg"><Mail size={24} /></div>
                   <div>
                     <h3 className="font-semibold mb-2">{t.emailLabel}</h3>
-                    <p className="text-muted-foreground text-sm">recruitment@blackwarriors.gg</p>
+                    <p className="text-muted-foreground text-sm">abdelhamidelaali@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -131,15 +131,13 @@ export default function RecruitmentPage() {
                     <label htmlFor="role" className="block text-sm font-semibold mb-2">{t.position}</label>
                     <select id="role" name="role" required value={formData.role} onChange={handleChange} className="w-full px-4 py-3 bg-input border border-border rounded-lg focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 transition-smooth text-foreground">
                       <option value="">{t.selectPosition}</option>
-                      <option value="player">Player - AWM Specialist</option>
-                      <option value="player">Player - Assault</option>
-                      <option value="player">Player - Support</option>
-                      <option value="player">Player - IGL</option>
-                      <option value="player">Player - Flex</option>
-                      <option value="coach">Esports Coach</option>
-                      <option value="analyst">Game Analyst</option>
-                      <option value="manager">Team Manager</option>
-                      <option value="other">Other</option>
+                      <option value="First Rusher">First Rusher</option>
+                      <option value="Second Rusher">Second Rusher</option>
+                      <option value="Support Specialist">Support Specialist</option>
+                      <option value="Cover AWM">Cover AWM</option>
+                      <option value="Esports Coach">Esports Coach</option>
+                      <option value="Team Manager">Team Manager</option>
+                      <option value="Other">Other</option>
                     </select>
                   </div>
                   <div>

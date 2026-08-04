@@ -16,7 +16,8 @@
     "joinTeam": "Rejoindre l'équipe",
     "meetSquad": "Rencontrez Notre Équipe",
     "meetSquadDesc": "Cinq joueurs exceptionnels unis par une seule mission : dominer Free Fire.",
-    "viewFullSquad": "Voir l'équipe complète"
+    "viewFullSquad": "Voir l'équipe complète",
+    "saying": "Les Black Warriors sont une idée, et une idée ne meurt jamais"
   },
   "squad": {
     "title": "Notre Équipe d'Élite",
@@ -37,10 +38,10 @@
     "tournamentsDesc": "Titres de champions couvrant les compétitions régionales et internationales, établissant notre domination.",
     "yearsExcellence": "Années d'Excellence",
     "yearsDesc": "Depuis 2021, nous repoussons les limites du jeu compétitif dans la région MENA.",
-    "visionTitle": "Notre Vision pour 2025 et Au-delà",
-    "vision1": "BLACK WARRIORS n'est pas seulement une équipe—nous sommes un mouvement vers l'excellence dans l'esports. Notre vision va au-delà de la victoire en tournoi ; nous visons à élever l'ensemble de l'écosystème du jeu compétitif dans la région MENA.",
-    "vision2": "Nous sommes engagés à développer la prochaine génération de talents esportifs, en créant des opportunités pour les joueurs émergents.",
-    "vision3": "Grâce à l'innovation dans les méthodologies d'entraînement et l'engagement communautaire, BLACK WARRIORS continuera à établir la norme de ce que signifie être une organisation d'esports championne.",
+    "visionTitle": "Notre Vision pour 2027 et Au-delà",
+    "vision1": "BLACK WARRIORS n'est pas seulement une équipe—nous sommes un mouvement vers l'excellence dans l'esports. Notre vision va au-delà de la victoire en tournoi ; nous visons à élever l'ensemble de l'écosystème du jeu compétitif dans la région MENA et dans le Monde.",
+    "vision2": "Nous sommes engagés à développer la prochaine génération de talents esportifs, en créant des opportunités pour les joueurs émergents, et à prouver que les équipes MENA peuvent dominer sur la scène mondiale.",
+    "vision3": "Grâce à l'innovation dans les méthodologies d'entraînement, l'investissement dans les sciences du sport et l'engagement communautaire, BLACK WARRIORS continuera à établir la norme de ce que signifie être une organisation d'esports championne.",
     "vision4": "L'avenir nous appartient. Les légendes s'écrivent. Rejoignez-nous dans ce voyage incroyable.",
     "timeline": [
       { "year": "2021", "title": "Fondation & Vision", "description": "BLACK WARRIORS est fondée avec pour mission d'établir l'organisation d'esports Free Fire de référence dans la région MENA. L'organisation commence avec des protocoles intensifs de recrutement et d'entraînement.", "highlight": true },
@@ -66,7 +67,7 @@
     }
   },
   "recruitment": {
-    "title": "Rejoindre Les Warriors",
+    "title": "Rejoindre Les BW",
     "description": "Êtes-vous prêt à concourir au plus haut niveau ? BLACK WARRIORS est toujours à la recherche de talents d'élite. Si vous avez ce qu'il faut, nous voulons vous entendre.",
     "emailLabel": "Email",
     "phoneLabel": "Téléphone",
@@ -98,7 +99,7 @@
     "academyCta": "Postuler à l'Académie → Places limitées",
     "sponsorTitle": "Opportunités de Partenariat",
     "sponsorDesc": "Intéressé à s'associer avec BLACK WARRIORS ? Nous offrons des packages de parrainage complets.",
-    "sponsorCta": "Contactez-nous à sponsor@blackwarriors.gg"
+    "sponsorCta": "Contactez-nous à abdelhamidelaali@gmail.com"
   },
   "footer": {
     "tagline": "L'organisation d'esports Free Fire de référence dans la région MENA. Établie pour dominer.",
