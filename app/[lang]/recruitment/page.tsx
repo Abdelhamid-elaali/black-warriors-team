@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { Mail, MapPin, Phone, Send, CheckCircle } from 'lucide-react';
+import { useState, useRef } from 'react';
+import { Mail, MapPin, Phone, Send, CheckCircle, UploadCloud, X, Image as ImageIcon } from 'lucide-react';
 import { useParams } from 'next/navigation';
 import en from '@/dictionaries/en.json';
 import fr from '@/dictionaries/fr.json';
@@ -17,12 +17,70 @@ export default function RecruitmentPage() {
   const currentLang = (params?.lang as Locale) || 'en';
   const t = dictionaries[currentLang]?.recruitment || dictionaries.en.recruitment;
 
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', role: '', experience: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    role: '',
+    experience: '',
+    message: '',
+    profilePicture: '',
+  });
+  const [fileName, setFileName] = useState('');
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    if (file.size > 10 * 1024 * 1024) {
+      toast.error('File size exceeds 10MB limit.');
+      return;
+    }
+
+    setFileName(file.name);
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const img = new window.Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        let width = img.width;
+        let height = img.height;
+        const maxDim = 1200;
+
+        if (width > maxDim || height > maxDim) {
+          if (width > height) {
+            height = Math.round((height * maxDim) / width);
+            width = maxDim;
+          } else {
+            width = Math.round((width * maxDim) / height);
+            height = maxDim;
+          }
+        }
+
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        ctx?.drawImage(img, 0, 0, width, height);
+
+        const compressedBase64 = canvas.toDataURL('image/jpeg', 0.82);
+        setFormData((prev) => ({ ...prev, profilePicture: compressedBase64 }));
+      };
+      img.src = event.target?.result as string;
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const removeFile = () => {
+    setFormData((prev) => ({ ...prev, profilePicture: '' }));
+    setFileName('');
+    if (fileInputRef.current) fileInputRef.current.value = '';
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -38,7 +96,8 @@ export default function RecruitmentPage() {
         
         // Reset form after 3 seconds
         setTimeout(() => {
-          setFormData({ name: '', email: '', phone: '', role: '', experience: '', message: '' });
+          setFormData({ name: '', email: '', phone: '', role: '', experience: '', message: '', profilePicture: '' });
+          setFileName('');
           setSubmitted(false);
         }, 3000);
       } else {
@@ -151,6 +210,58 @@ export default function RecruitmentPage() {
                       <option value="3-5">3-5 years</option>
                       <option value="5+">5+ years</option>
                     </select>
+                  </div>
+
+                  {/* Game Profile Picture (Optional) */}
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 flex items-center justify-between">
+                      <span>{t.gameProfilePic}</span>
+                      <span className="text-xs text-muted-foreground font-normal">{t.optional}</span>
+                    </label>
+
+                    {formData.profilePicture ? (
+                      <div className="relative rounded-lg border border-accent/40 bg-accent/5 p-4 flex items-center gap-4">
+                        <div className="relative w-16 h-16 rounded-md overflow-hidden border border-accent/30 flex-shrink-0 bg-black">
+                          <img src={formData.profilePicture} alt="Game Profile Preview" className="w-full h-full object-cover" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-semibold text-foreground truncate">{fileName || 'Profile_Screenshot.png'}</p>
+                          <p className="text-xs text-accent font-medium mt-1">✓ Screenshot Attached</p>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={removeFile}
+                          className="p-2 rounded-lg bg-destructive/10 text-destructive hover:bg-destructive hover:text-white transition-smooth"
+                          title={t.removeImage}
+                        >
+                          <X size={18} />
+                        </button>
+                      </div>
+                    ) : (
+                      <div
+                        onClick={() => fileInputRef.current?.click()}
+                        className="border-2 border-dashed border-border hover:border-accent/50 rounded-lg p-6 text-center cursor-pointer transition-all duration-300 hover:bg-accent/5 group"
+                      >
+                        <input
+                          type="file"
+                          ref={fileInputRef}
+                          onChange={handleFileChange}
+                          accept="image/png, image/jpeg, image/webp"
+                          className="hidden"
+                        />
+                        <div className="flex flex-col items-center justify-center gap-2">
+                          <div className="p-3 rounded-full bg-accent/10 text-accent group-hover:scale-110 transition-transform">
+                            <UploadCloud size={24} />
+                          </div>
+                          <p className="text-sm font-semibold text-foreground group-hover:text-accent transition-colors">
+                            {t.gameProfilePic}
+                          </p>
+                          <p className="text-xs text-muted-foreground max-w-sm">
+                            {t.uploadHint}
+                          </p>
+                        </div>
+                      </div>
+                    )}
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-semibold mb-2">{t.tellUs}</label>

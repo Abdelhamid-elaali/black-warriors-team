@@ -19,6 +19,7 @@ interface RecruitmentEmailProps {
   role: string;
   experience: string;
   message: string;
+  hasProfilePicture?: boolean;
 }
 
 export const RecruitmentEmail = ({
@@ -28,6 +29,7 @@ export const RecruitmentEmail = ({
   role,
   experience,
   message,
+  hasProfilePicture,
 }: RecruitmentEmailProps) => {
   const previewText = `New Recruitment Application from ${name} - ${role}`;
 
@@ -62,6 +64,12 @@ export const RecruitmentEmail = ({
               <strong style={label}>Competitive Experience:</strong> {experience}
             </Text>
             
+            {hasProfilePicture && (
+              <Text style={text}>
+                <strong style={label}>Game Profile Screenshot:</strong> Attached to this email (`game-profile-${name.toLowerCase().replace(/\s+/g, '-')}.jpg`)
+              </Text>
+            )}
+
             <Hr style={divider} />
             
             <Text style={label}>Tell Us About Yourself:</Text>
@@ -161,4 +169,18 @@ const footerText = {
   color: '#525252', /* Tailwind neutral-600 */
   fontSize: '12px',
   margin: '0',
+};
+
+const imageContainer = {
+  marginTop: '12px',
+  marginBottom: '12px',
+  textAlign: 'center' as const,
+};
+
+const profileImg = {
+  borderRadius: '8px',
+  border: '1px solid #eab308',
+  maxWidth: '100%',
+  maxHeight: '400px',
+  objectFit: 'contain' as const,
 };
