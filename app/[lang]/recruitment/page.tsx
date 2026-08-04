@@ -135,6 +135,7 @@ export default function RecruitmentPage() {
                       <option value="Second Rusher">Second Rusher</option>
                       <option value="Support Specialist">Support Specialist</option>
                       <option value="Cover AWM">Cover AWM</option>
+                      <option value="Bomber">Bomber</option>
                       <option value="Esports Coach">Esports Coach</option>
                       <option value="Team Manager">Team Manager</option>
                       <option value="Other">Other</option>
