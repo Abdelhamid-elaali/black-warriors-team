@@ -8,6 +8,7 @@ import fr from '@/dictionaries/fr.json';
 import ar from '@/dictionaries/ar.json';
 
 import { PLAYERS } from '@/data/players';
+import { PlayerImage } from '@/components/PlayerImage';
 
 const allDicts = { en, fr, ar } as const;
 type Locale = keyof typeof allDicts;
@@ -45,8 +46,8 @@ export function FeaturedPlayers() {
             >
               <div className="relative aspect-square overflow-hidden rounded-lg bg-card">
                 {/* Player Image */}
-                <img
-                  src={player.image}
+                <PlayerImage
+                  player={player}
                   alt={player.name}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                 />

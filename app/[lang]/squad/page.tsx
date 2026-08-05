@@ -2,6 +2,7 @@ import { PLAYERS } from '@/data/players';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { getDictionary } from '@/lib/dictionaries';
+import { PlayerImage } from '@/components/PlayerImage';
 
 export const metadata = {
   title: 'Squad - BLACK WARRIORS',
@@ -38,8 +39,8 @@ export default async function SquadPage({ params }: { params: Promise<{ lang: st
                 <div className="flex flex-col md:flex-row">
                   {/* Image */}
                   <div className="relative w-full md:w-56 h-56 flex-shrink-0 overflow-hidden">
-                    <img
-                      src={player.image}
+                    <PlayerImage
+                      player={player}
                       alt={player.name}
                       className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                     />

@@ -5,6 +5,7 @@ export interface Player {
   role: string;
   joinDate: string;
   image: string;
+  imageLight?: string;
   stats: {
     kills: number;
     wins: number;
@@ -28,6 +29,7 @@ export const PLAYERS: Player[] = [
     role: 'Cover AWM - Leader',
     joinDate: '2020-10-15',
     image: '/members/LBOSS.png',
+    imageLight: '/members/LBOSS-light.jpeg',
     stats: {
       kills: 7821,
       wins: 1504,
@@ -51,6 +53,7 @@ export const PLAYERS: Player[] = [
     role: 'First Rusher ',
     joinDate: '2021-02-01',
     image: '/members/TITAN.png',
+    imageLight: '/members/TITAN-light.jpeg',
     stats: {
       kills: 5124,
       wins: 1130,
@@ -74,6 +77,7 @@ export const PLAYERS: Player[] = [
     role: 'Support Specialist',
     joinDate: '2025-07-01',
     image: '/members/CHINWI.png',
+    imageLight: '/members/CHINWI-light.jpeg',
     stats: {
       kills: 6456,
       wins: 857,
@@ -97,6 +101,7 @@ export const PLAYERS: Player[] = [
     role: 'First Rusher',
     joinDate: '2026-05-01',
     image: '/members/L4EO.png',
+    imageLight: '/members/L4EO-light.jpeg',
     stats: {
       kills: 4508,
       wins: 780,
@@ -114,6 +119,7 @@ export const PLAYERS: Player[] = [
     role: 'Second Rusher',
     joinDate: '2021-04-01',
     image: '/members/XBAN.png',
+    imageLight: '/members/XBAN-light.jpeg',
     stats: {
       kills: 4892,
       wins: 1028,
@@ -137,6 +143,7 @@ export const PLAYERS: Player[] = [
     role: 'Support Specialist',
     joinDate: '2025-02-01',
     image: '/members/ETM.jpeg',
+    imageLight: '/members/ETM-light.jpeg',
     stats: {
       kills: 6585,
       wins: 952,
@@ -159,6 +166,7 @@ export const PLAYERS: Player[] = [
     role: 'Second Rusher',
     joinDate: '2026-08-01',
     image: '/members/LMONTIF.jpeg',
+    imageLight: '/members/LMONTIF-light.jpeg',
     stats: {
       kills: 8560,
       wins: 1742,

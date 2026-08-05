@@ -2,6 +2,7 @@ import { PLAYERS } from '@/data/players';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeft, Instagram, Facebook, Youtube } from 'lucide-react';
+import { PlayerImage } from '@/components/PlayerImage';
 
 interface Props {
   params: Promise<{ lang: string; id: string }>;
@@ -55,8 +56,8 @@ export default async function PlayerPage({ params }: Props) {
           {/* Image */}
           <div className="relative">
             <div className="relative aspect-square rounded-xl overflow-hidden">
-              <img
-                src={player.image}
+              <PlayerImage
+                player={player}
                 alt={player.name}
                 className="w-full h-full object-cover"
               />
@@ -200,8 +201,8 @@ export default async function PlayerPage({ params }: Props) {
                 className="group"
               >
                 <div className="relative aspect-square rounded-lg overflow-hidden mb-4">
-                  <img
-                    src={teammate.image}
+                  <PlayerImage
+                    player={teammate}
                     alt={teammate.name}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
                   />
