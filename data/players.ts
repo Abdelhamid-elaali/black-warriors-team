@@ -51,7 +51,7 @@ export const PLAYERS: Player[] = [
     name: 'Anas',
     nickname: 'TITAN',
     role: 'First Rusher ',
-    joinDate: '2021-02-01',
+    joinDate: '2020-10-01',
     image: '/members/TITAN.png',
     imageLight: '/members/TITAN-light.jpeg',
     stats: {
