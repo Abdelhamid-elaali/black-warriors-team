@@ -94,24 +94,7 @@ export const PLAYERS: Player[] = [
       instagram: '@fouad_laifa_'
     },
   },
-  {
-    id: '4',
-    name: 'Ayoub',
-    nickname: 'L4EO',
-    role: 'First Rusher',
-    joinDate: '2026-05-01',
-    image: '/members/L4EO.png',
-    imageLight: '/members/L4EO-light.jpeg',
-    stats: {
-      kills: 4508,
-      wins: 780,
-      kd: 3.8,
-      headshots: 1525,
-    },
-    bio: 'Pro rusher player and the first rusher for BLACK WARRIORS. A mobile player known for aggressive openings, fast pressure, and fearless entry fights.',
-    achievements: [],
-    social: {},
-  },
+
   {
     id: '5',
     name: 'Iyad',
