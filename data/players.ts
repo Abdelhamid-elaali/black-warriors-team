@@ -73,7 +73,7 @@ export const PLAYERS: Player[] = [
   {
     id: '3',
     name: 'Fouad',
-    nickname: 'Chinwi',
+    nickname: 'Zzz!',
     role: 'Support Specialist',
     joinDate: '2025-07-01',
     image: '/members/CHINWI.png',
@@ -142,27 +142,5 @@ export const PLAYERS: Player[] = [
       instagram: '@etm__018'
     },
   },
-  {
-    id: '7',
-    name: 'Aymane',
-    nickname: 'LMONTIF',
-    role: 'Second Rusher',
-    joinDate: '2026-08-01',
-    image: '/members/LMONTIF.jpeg',
-    imageLight: '/members/LMONTIF-light.jpeg',
-    stats: {
-      kills: 8560,
-      wins: 1742,
-      kd: 8.4,
-      headshots: 3281,
-    },
-    bio: 'Second Rusher for BLACK WARRIORS. A high-fragging entry specialist with lethal accuracy and aggressive playstyle leading the frontlines.',
-    achievements: [
-      'Top Fragger MENA League 2024',
-      'Most Eliminations Award',
-    ],
-    social: {
-      instagram: '@lmontif__es'
-    },
-  },
+
 ];
