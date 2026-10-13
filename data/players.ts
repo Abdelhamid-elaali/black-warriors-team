@@ -142,5 +142,26 @@ export const PLAYERS: Player[] = [
       instagram: '@etm__018'
     },
   },
-
+  {
+    id: '7',
+    name: 'KAZx',
+    nickname: 'KAZx',
+    role: 'Rusher',
+    joinDate: '2026-10-05',
+    image: '/members/KazX.png',
+    imageLight: '/members/KazX.png',
+    stats: {
+      kills: 5640,
+      wins: 980,
+      kd: 5.7,
+      headshots: 2310,
+    },
+    bio: 'Aggressive rusher for BLACK WARRIORS. Known for pinpoint precision, lightning-fast reflex frags, and tactical execution in competitive Free Fire tournaments.',
+    achievements: [
+      'Top Fragger Award',
+      'Rising Star 2025',
+    ],
+    social: {},
+  },
 ];
+
