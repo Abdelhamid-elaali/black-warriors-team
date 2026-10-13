@@ -144,7 +144,7 @@ export const PLAYERS: Player[] = [
   },
   {
     id: '7',
-    name: 'KAZx',
+    name: 'Zakaria',
     nickname: 'KAZx',
     role: 'Rusher',
     joinDate: '2026-10-05',
@@ -161,7 +161,9 @@ export const PLAYERS: Player[] = [
       'Top Fragger Award',
       'Rising Star 2025',
     ],
-    social: {},
+    social: {
+      instagram: '@bs______zakaria'
+    },
   },
 ];
 

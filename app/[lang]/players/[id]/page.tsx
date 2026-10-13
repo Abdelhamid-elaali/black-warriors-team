@@ -105,7 +105,7 @@ export default async function PlayerPage({ params }: Props) {
                 <div className="flex gap-3">
                   {player.social.instagram && (
                     <a
-                      href={`https://instagram.com/${player.social.instagram.replace('@', '')}`}
+                      href={player.social.instagram.startsWith('http') ? player.social.instagram : `https://instagram.com/${player.social.instagram.replace('@', '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-muted rounded-lg transition-smooth hover:bg-accent hover:text-accent-foreground"
