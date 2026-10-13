@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     siteName: 'Black Warriors Esports',
     images: [
       {
-        url: '/og-image.jpg', // A fallback image we can rely on
-        width: 1200,
-        height: 630,
+        url: '/Black Warriors Esports Banner.png',
+        width: 1730,
+        height: 909,
         alt: 'Black Warriors Esports Banner',
       },
     ],
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'BLACK WARRIORS - Elite Esports Organization',
     description: "Join the ranks of MENA's most dominant Free Fire team.",
-    images: ['/og-image.jpg'],
+    images: ['/Black Warriors Esports Banner.png'],
     creator: '@BlackWarriors',
   },
   verification: {
